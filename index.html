@@ -26,6 +26,8 @@
             const { Player } = TextAliveApp;
             var player = new Player({
                 app: {
+                    appAuthor: "matsuba(original author daniwell)",
+                    appName: "Char Cube on the AR",
                     parameters: [
                         {
                             title: "テキスト色",
@@ -187,14 +189,6 @@
         {
             var w = document.documentElement.clientWidth;
             var h = document.documentElement.clientHeight;
-
-            //
-            // THREE.js (Renderer, Scene, Camera) の初期化
-            //        
-            // var renderer = new THREE.WebGLRenderer( { antialias: true, alpha: false } );
-            // renderer.setPixelRatio(window.devicePixelRatio);
-            // renderer.setSize(w, h);
-            // document.body.appendChild(renderer.domElement);
 
             var col   = 0xeeeeee;
             //var scene = new THREE.Scene();
