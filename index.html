@@ -225,12 +225,7 @@
             ctx.beginPath();
             ctx.strokeStyle = this._frameColor;
             ctx.lineWidth = 30;
-            ctx.rect(0, 0, can.width, can.height);
-            ctx.stroke();
-
-            ctx.lineWidth = 10;
-            ctx.strokeStyle = this._frameColor2;
-            ctx.stroke();
+            ctx.strokeRect(0, 0, can.width, can.height);
 
             ctx.fillRect(ctx.lineWidth / 2 ,ctx.lineWidth / 2 ,can.width - ctx.lineWidth,can.height - ctx.lineWidth);
 
