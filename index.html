@@ -184,7 +184,7 @@
             this._ctx = this._can.getContext("2d");
             //this._ctx.fillStyle = "red";
             var tex = this._tex = new THREE.Texture(this._can);
-            var mat = this._mat = new THREE.MeshBasicMaterial({ map: tex, transparent: true, alphaTest: 0.4, side: THREE.DoubleSide });
+            var mat = this._mat = new THREE.MeshBasicMaterial({ map: tex, side: THREE.DoubleSide });
             var box = this._box = new THREE.Mesh(new THREE.BoxBufferGeometry(2, 2, 2), mat);
             this._box.position.set(0.0, 1.0, 0.0);
             
@@ -266,7 +266,7 @@
 
             ctx.strokeStyle = this._color;
             ctx.fillStyle = "blue";
-            ctx.lineWidth = 16;
+            ctx.lineWidth = 8;
             ctx.rect(0, 0, can.width, can.height);
             ctx.stroke();
 
@@ -290,6 +290,7 @@
     }
 
 
+      //main処理: TextAliveのAR表示
       const renderer = new THREE.WebGLRenderer({
         antialias: true,
         alpha: true
