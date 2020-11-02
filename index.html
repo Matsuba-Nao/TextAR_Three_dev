@@ -249,9 +249,9 @@
             ctx.fillStyle = "blue";
             
             ctx.lineWidth = 8;
-            //ctx.rect(0, 0, can.width, can.height);
-            //ctx.stroke();
-            ctx.fillRect(0,0,can.width,can.height);
+            ctx.rect(0, 0, can.width, can.height);
+            ctx.stroke();
+            ctx.fillRect(ctx.lineWidth,ctx.lineWidth,can.width - ctx.lineWidth,can.height - ctx.lineWidth);
 
             this._tex.needsUpdate = true;
         }
