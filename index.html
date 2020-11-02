@@ -296,7 +296,10 @@
 
       const arToolkitContext = new THREEx.ArToolkitContext({
         cameraParametersUrl: './data/camera_para.dat',
-        detectionMode: 'mono'
+        detectionMode: 'mono',
+        maxDetectionRate: 120,
+        canvasWidth: 2000,
+        canvasHeight: 2000
       });
 
       arToolkitContext.init(() => {
