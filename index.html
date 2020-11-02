@@ -156,8 +156,8 @@
         constructor ()
         {
             var col   = 0xeeeeee;
-            this._frameColor = "rgb(0,0,0)";
-            this._textColor = "rgb(255,122,188)";
+            this._frameColor = "rgb(255,255,255)";
+            this._textColor = "rgb(255,56,155)";
 
             // 歌詞表示用ボックスの生成
             this._can = document.createElement("canvas");
@@ -165,8 +165,8 @@
 
             var tex = this._tex = new THREE.Texture(this._can);
             var mat = this._mat = new THREE.MeshBasicMaterial({ map: tex, side: THREE.DoubleSide });
-            var box = this._box = new THREE.Mesh(new THREE.BoxBufferGeometry(2, 2, 2), mat);
-            this._box.position.set(0.0, 1.5, 0.0);
+            var box = this._box = new THREE.Mesh(new THREE.BoxBufferGeometry(3, 3, 3), mat);
+            this._box.position.set(0.0, 2.0, 0.0);
             
             this._drawFrame();
         }
