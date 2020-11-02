@@ -139,20 +139,6 @@
 
             this._threeMng.update(position);
         }
-        // パラメタアップデート
-        _onAppParameterUpdate (name, value)
-        {
-            var  col = value.r * 256 * 256 + value.g * 256 + value.b;
-            switch (name)
-            {
-            case "Color":
-                this._threeMng.changeColor(col);
-                break;
-            case "BackgroundColor":
-                this._threeMng.changeBackgroundColor(col);
-                break;
-            }
-        }
 
         _update ()
         {
@@ -187,20 +173,9 @@
     {
         constructor ()
         {
-            var w = document.documentElement.clientWidth;
-            var h = document.documentElement.clientHeight;
+
 
             var col   = 0xeeeeee;
-            //var scene = new THREE.Scene();
-            //scene.background = new THREE.Color(col);
-
-            // var camera = new THREE.PerspectiveCamera(50, w / h, 0.1, 100);
-            // camera.position.z = 20;
-            // camera.lookAt(0, 0, 0);
-
-            //this._renderer = renderer;
-            //this._scene    = scene;
-            //this._camera   = camera;
 
             this._color = "#000";
 
@@ -319,8 +294,11 @@
         antialias: true,
         alpha: true
       });
+      var clientWidth = document.documentElement.clientWidth;
+      var clientHeight = document.documentElement.clientHeight;
+
       renderer.setClearColor(new THREE.Color(), 0);
-      renderer.setSize(640, 480);
+      renderer.setSize(w, h);
       renderer.domElement.style.position = 'absolute';
       renderer.domElement.style.top = '0px';
       renderer.domElement.style.left = '0px';
