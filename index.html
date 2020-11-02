@@ -161,6 +161,10 @@
             // 歌詞表示用ボックスの生成
             this._can = document.createElement("canvas");
             this._ctx = this._can.getContext("2d");
+            const gradient = this._ctx.createLinearGradient(0,0,512,512);
+            gradient.addColorStop(0.0, "rgb(110, 197, 203)");
+            gradient.addColorStop(1.0, "rgb(137, 249, 255)");
+            
 
             var tex = this._tex = new THREE.Texture(this._can);
             var mat = this._mat = new THREE.MeshBasicMaterial({ map: tex, side: THREE.DoubleSide });
@@ -217,7 +221,7 @@
             can.width = can.height = 512;
 
             ctx.strokeStyle = this._color;
-            ctx.fillStyle = "rgb(124,247,249)";
+            ctx.fillStyle = gradient;
             
             ctx.lineWidth = 20;
             ctx.rect(0, 0, can.width, can.height);
