@@ -156,9 +156,9 @@
         constructor ()
         {
             var col   = 0xeeeeee;
-            this._frameColor = "rgb(208,215,218)";
-            this._textColor = "rgb(255,56,155)";
-            this._frameColor2 = "rgb(47,52,54)";
+            this._frameColor = "rgb(237, 255, 255)";
+            this._textColor = "rgb(255, 56, 155)";
+            this._frameColor2 = "rgb(47, 52, 54)";
 
             // 歌詞表示用ボックスの生成
             this._can = document.createElement("canvas");
@@ -216,7 +216,7 @@
             var can = this._can;
             var ctx = this._ctx;
             var gradient = this._ctx.createLinearGradient(0,0,512,512);
-            gradient.addColorStop(0.0, "rgb(75, 244, 244)");
+            gradient.addColorStop(0.0, "rgb(35, 239, 239)");
             gradient.addColorStop(1.0, "rgb(183, 255, 255)");
 
             can.width = can.height = 512;
