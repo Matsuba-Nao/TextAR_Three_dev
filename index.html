@@ -202,12 +202,12 @@
             this._scene    = scene;
             //this._camera   = camera;
 
-            this._color = "#000";
+            this._color = "#eeeeee";
 
             // 歌詞表示用ボックスの生成
             this._can = document.createElement("canvas");
             this._ctx = this._can.getContext("2d");
-            this._ctx.fillStyle = "rgb(0,255,255)";
+            this._ctx.fillStyle = "white";
             var tex = this._tex = new THREE.Texture(this._can);
             var mat = this._mat = new THREE.MeshBasicMaterial({ map: tex, transparent: true, alphaTest: 0.4, side: THREE.DoubleSide });
             var box = this._box = new THREE.Mesh(new THREE.BoxBufferGeometry(2, 2, 2), mat);
@@ -290,7 +290,7 @@
             can.width = can.height = 512;
 
             ctx.strokeStyle = this._color;
-            ctx.fillStyle = "0x00ffff";
+            ctx.fillStyle = "blue";
             ctx.lineWidth = 16;
             ctx.rect(0, 0, can.width, can.height);
             ctx.stroke();
