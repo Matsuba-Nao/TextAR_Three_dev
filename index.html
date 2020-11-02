@@ -251,7 +251,7 @@
             ctx.lineWidth = 20;
             ctx.rect(0, 0, can.width, can.height);
             ctx.stroke();
-            ctx.fillRect(ctx.lineWidth,ctx.lineWidth,can.width - ctx.lineWidth,can.height - ctx.lineWidth);
+            ctx.fillRect(ctx.lineWidth / 2 ,ctx.lineWidth / 2 ,can.width - ctx.lineWidth,can.height - ctx.lineWidth);
 
             this._tex.needsUpdate = true;
         }
