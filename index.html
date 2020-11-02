@@ -246,9 +246,9 @@
             can.width = can.height = 512;
 
             ctx.strokeStyle = this._color;
-            ctx.fillStyle = "rgb(93,189,178)";
+            ctx.fillStyle = "rgb(73,249,252)";
             
-            ctx.lineWidth = 16;
+            ctx.lineWidth = 20;
             ctx.rect(0, 0, can.width, can.height);
             ctx.stroke();
             ctx.fillRect(ctx.lineWidth,ctx.lineWidth,can.width - ctx.lineWidth,can.height - ctx.lineWidth);
@@ -264,7 +264,7 @@
             var size = can.width;
             var fontSize = size * 0.5 * progress;
             ctx.textAlign = "center";
-            ctx.fillStyle = "rgb(231,61,112)";
+            ctx.fillStyle = "rgb(255,38,103)";
             ctx.font = "bold " + fontSize + "px sans-serif";
 
             ctx.fillText(text, size/2, size/2 + fontSize * 0.37);
