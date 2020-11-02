@@ -161,6 +161,9 @@
             // 歌詞表示用ボックスの生成
             this._can = document.createElement("canvas");
             this._ctx = this._can.getContext("2d");
+            const gradient = this._ctx.createLinearGradient(0,0,512,512);
+            gradient.addColorStop(0.0, "rgb(110, 197, 203)");
+            gradient.addColorStop(1.0, "rgb(137, 249, 255)");
 
             
 
@@ -215,16 +218,13 @@
         {
             var can = this._can;
             var ctx = this._ctx;
-            const gradient = this._ctx.createLinearGradient(0,0,512,512);
-            gradient.addColorStop(0.0, "rgb(110, 197, 203)");
-            gradient.addColorStop(1.0, "rgb(137, 249, 255)");
+            var gradient = this.gradient;
+
             can.width = can.height = 512;
 
             ctx.strokeStyle = this._color;
             ctx.fillStyle = gradient;
 
-            gradient.addColorStop(0.0, "rgb(110, 197, 203)");
-            gradient.addColorStop(1.0, "rgb(137, 249, 255)");
             ctx.lineWidth = 20;
             ctx.rect(0, 0, can.width, can.height);
             ctx.stroke();
@@ -243,10 +243,11 @@
             ctx.textAlign = "center";
             ctx.fillStyle = "rgb(255,38,103)";
             ctx.strokeStyle = "white";
+            ctx.lineWidth = 3;
             ctx.font = "bold " + fontSize + "px sans-serif";
 
             ctx.fillText(text, size/2, size/2 + fontSize * 0.37);
-            ctx.strokeText(text, size/2, size/2 + fontSize * 0.37, 3);
+            ctx.strokeText(text, size/2, size/2 + fontSize * 0.37,);
         }
         _easeOutBack (x) { return 1 + 2.70158 * Math.pow(x - 1, 3) + 1.70158 * Math.pow(x - 1, 2); }
     }
