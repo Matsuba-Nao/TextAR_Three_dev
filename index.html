@@ -180,7 +180,7 @@
             this._ctx = this._can.getContext("2d");
 
             var tex = this._tex = new THREE.Texture(this._can);
-            var mat = this._mat = new THREE.MeshLambertMaterial({map: tex});
+            var mat = this._mat = new THREE.MeshBasicMaterial({ map: tex, side: THREE.DoubleSide });
             var box = this._box = new THREE.Mesh(new THREE.BoxBufferGeometry(2, 2, 2), mat);
             this._box.position.set(0.0, 1.5, 0.0);
             
