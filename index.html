@@ -185,21 +185,21 @@
             //
             // THREE.js (Renderer, Scene, Camera) の初期化
             //        
-            var renderer = new THREE.WebGLRenderer( { antialias: true, alpha: false } );
-            renderer.setPixelRatio(window.devicePixelRatio);
-            renderer.setSize(w, h);
-            document.body.appendChild(renderer.domElement);
+            // var renderer = new THREE.WebGLRenderer( { antialias: true, alpha: false } );
+            // renderer.setPixelRatio(window.devicePixelRatio);
+            // renderer.setSize(w, h);
+            // document.body.appendChild(renderer.domElement);
 
             var col   = 0xeeeeee;
-            var scene = new THREE.Scene();
-            scene.background = new THREE.Color(col);
+            //var scene = new THREE.Scene();
+            //scene.background = new THREE.Color(col);
 
             // var camera = new THREE.PerspectiveCamera(50, w / h, 0.1, 100);
             // camera.position.z = 20;
             // camera.lookAt(0, 0, 0);
 
-            this._renderer = renderer;
-            this._scene    = scene;
+            //this._renderer = renderer;
+            //this._scene    = scene;
             //this._camera   = camera;
 
             this._color = "#000";
