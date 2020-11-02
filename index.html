@@ -179,6 +179,12 @@
             // 歌詞表示用ボックスの生成と初期化
             this._can = document.createElement("canvas");
             this._ctx = this._can.getContext("2d");
+            this._ctx.beginPath();
+            this._ctx.fillStyle = "white";
+            this._ctx.lineWidth = 16;
+            this._ctx.rect(0,0,512,512);
+            this._ctx.fill();
+            this._ctx.stroke();
 
             var tex = this._tex = new THREE.Texture(this._can);
             var mat = this._mat = new THREE.MeshBasicMaterial({ map: tex, side: THREE.DoubleSide });
