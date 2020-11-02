@@ -174,12 +174,11 @@
         constructor ()
         {
             var col   = 0xeeeeee;
-            this._color = "#000";
+            this._color = "red";
 
             // 歌詞表示用ボックスの生成と初期化
             this._can = document.createElement("canvas");
             this._ctx = this._can.getContext("2d");
-            this._ctx.fillStyle = "red";
 
             var tex = this._tex = new THREE.Texture(this._can);
             var mat = this._mat = new THREE.MeshBasicMaterial({ map: tex, side: THREE.DoubleSide });
