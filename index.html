@@ -173,7 +173,8 @@
     {
         constructor ()
         {
-            this._color = "0x000000";
+            var col   = 0xeeeeee;
+            this._color = "red";
 
             // 歌詞表示用ボックスの生成
             this._can = document.createElement("canvas");
@@ -246,7 +247,7 @@
             can.width = can.height = 512;
 
             ctx.strokeStyle = this._color;
-            ctx.fillStyle = "rgb(0, 230, 230)";
+            ctx.fillStyle = "blue";
             
             ctx.lineWidth = 16;
             ctx.rect(0, 0, can.width, can.height);
