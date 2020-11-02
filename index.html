@@ -217,7 +217,8 @@
             var ctx = this._ctx;
             var gradient = this._ctx.createLinearGradient(0,0,512,512);
             gradient.addColorStop(0.0, "rgb(35, 239, 239)");
-            gradient.addColorStop(1.0, "rgb(183, 255, 255)");
+            gradient.addColorStop(0.5, "rgb(183, 255, 255)");
+            gradient.addColorStop(1.0, "rgb(255, 181, 218)");
 
             can.width = can.height = 512;
             ctx.fillStyle = gradient;
