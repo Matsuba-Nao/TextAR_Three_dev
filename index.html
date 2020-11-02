@@ -158,6 +158,7 @@
             var col   = 0xeeeeee;
             this._frameColor = "rgb(255,255,255)";
             this._textColor = "rgb(255,56,155)";
+            this.__frameColor2 = "rgb(47,52,54)";
 
             // 歌詞表示用ボックスの生成
             this._can = document.createElement("canvas");
@@ -225,6 +226,9 @@
 
             ctx.lineWidth = 20;
             ctx.rect(0, 0, can.width, can.height);
+            ctx.stroke();
+            ctx.lineWidth = 5;
+            ctx.strokeStyle = this._frameColor2;
             ctx.stroke();
             ctx.fillRect(ctx.lineWidth / 2 ,ctx.lineWidth / 2 ,can.width - ctx.lineWidth,can.height - ctx.lineWidth);
 
