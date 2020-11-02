@@ -28,20 +28,6 @@
                 app: {
                     appAuthor: "matsuba(original author daniwell)",
                     appName: "Char Cube on the AR",
-                    parameters: [
-                        {
-                            title: "テキスト色",
-                            name: "Color",
-                            className: "Color",
-                            initialValue: "#000000"
-                        },
-                        {
-                            title: "背景色",
-                            name: "BackgroundColor",
-                            className: "Color",
-                            initialValue: "#EEEEEE"
-                        },
-                    ],
                 },
                 mediaElement: document.querySelector("#media")
             });
@@ -75,9 +61,9 @@
                         生命を持たない君に乗せた
                         
                         僕ら今　恐る恐る　声をかける
-                        ハロー、ハロー、ハロー
+                        ハロー　ハロー　ハロー
                         世界は　まだ　夢の中さ
-                        ハロー、ハロー
+                        ハロー　ハロー
                         歌え！
                         
                         言葉は今　風になって
@@ -91,9 +77,9 @@
                         生命が確かにそこにあった
                         
                         君は今　産声を上げ始めた
-                        ハロー、ハロー、ハロー
+                        ハロー　ハロー　ハロー
                         世界がついに 目を覚ました
-                        ハロー、ハロー
+                        ハロー　ハロー
                         
                         だけど
                         言葉は全部　君になって
@@ -148,10 +134,6 @@
                 this._threeMng.update(t);
             }
             window.requestAnimationFrame(() => this._update());
-        }
-        _resize ()
-        {
-            this._threeMng.resize();
         }
     }
 
@@ -224,17 +206,6 @@
 
             // ボックスの回転
             this._box.rotation.set(position / 1234, position / 2345, position / 3456);
-        }
-        // リサイズ
-        resize ()
-        {
-            var stw = this._stw = document.documentElement.clientWidth;
-            var sth = this._sth = document.documentElement.clientHeight;
-            
-            this._camera.aspect = stw / sth;
-            this._camera.updateProjectionMatrix();
-            
-            this._renderer.setSize(stw, sth);
         }
         
         // 外枠（ワイヤーフレーム）の描画
