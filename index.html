@@ -161,7 +161,7 @@
             // 歌詞表示用ボックスの生成
             this._can = document.createElement("canvas");
             this._ctx = this._can.getContext("2d");
-            const gradient = this._ctx.createLinearGradient(0,0,512,512);
+            var gradient = this._ctx.createLinearGradient(0,0,512,512);
             gradient.addColorStop(0.0, "rgb(110, 197, 203)");
             gradient.addColorStop(1.0, "rgb(137, 249, 255)");
 
@@ -243,7 +243,7 @@
             ctx.textAlign = "center";
             ctx.fillStyle = "rgb(255,38,103)";
             ctx.strokeStyle = "white";
-            ctx.lineWidth = 3;
+            ctx.lineWidth = 4;
             ctx.font = "bold " + fontSize + "px sans-serif";
 
             ctx.fillText(text, size/2, size/2 + fontSize * 0.37);
