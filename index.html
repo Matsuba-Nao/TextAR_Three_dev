@@ -48,7 +48,7 @@
                 onAppReady: (app) => this._onAppReady(app),
                 onVideoReady: (v) => this._onVideoReady(v),
                 onTimeUpdate: (pos) => this._onTimeUpdate(pos),
-                onAppParameterUpdate: (name, value) => this._onAppParameterUpdate(name, value)
+                //onAppParameterUpdate: (name, value) => this._onAppParameterUpdate(name, value)
             });
             this._player = player;
         }
@@ -202,7 +202,7 @@
             this._scene    = scene;
             //this._camera   = camera;
 
-            this._color = "#000";
+            this._color = "#00ffff";
 
             // 歌詞表示用ボックスの生成
             this._can = document.createElement("canvas");
