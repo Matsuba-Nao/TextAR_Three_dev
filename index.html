@@ -176,7 +176,6 @@
 
 
             var col   = 0xeeeeee;
-
             this._color = "#000";
 
             // 歌詞表示用ボックスの生成
@@ -191,20 +190,6 @@
             this._drawFrame();
         }
 
-        // 色の変更（外枠＆文字）
-        changeColor (color)
-        {
-            var col = color.toString(16);
-            for (var i = col.length; i < 6; i ++) col = "0" + col;
-            this._color = "#" + col;
-            
-            this._drawFrame();
-        }
-        // 背景色の変更
-        changeBackgroundColor (color)
-        {
-            this._scene.background.set(color);
-        }
         // 歌詞の更新
         setLyrics (lyrics)
         {
@@ -218,7 +203,7 @@
             if (! this._lyrics) return;
 
             // 外枠を残してキャンバスをクリア
-            this._ctx.clearRect(8, 8, this._can.width - 16, this._can.height - 16);
+            //this._ctx.clearRect(8, 8, this._can.width - 16, this._can.height - 16);
             //this._ctx.fillRect(8, 8, this._can.width - 16, this._can.height - 16);
             var tk = "";
 
@@ -241,8 +226,6 @@
 
             // ボックスの回転
             this._box.rotation.set(position / 1234, position / 2345, position / 3456);
-
-            //this._renderer.render(this._scene, this._camera);
         }
         // リサイズ
         resize ()
