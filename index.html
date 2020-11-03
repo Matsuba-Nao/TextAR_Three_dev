@@ -184,7 +184,7 @@
             var tex = this._tex = new THREE.Texture(this._can);
             var mat = this._mat = new THREE.MeshBasicMaterial({ map: tex, side: THREE.DoubleSide });
             var box = this._box = new THREE.Mesh(new THREE.BoxBufferGeometry(1, 1, 1), mat);
-            this._box.position.set(0.0, 1.5, 0.0);
+            this._box.position.set(0.0, 1.0, 0.0);
             
             this._drawFrame();
         }
