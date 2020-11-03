@@ -201,8 +201,7 @@
             this._position = position;
             if (! this._lyrics) return;
 
-            // 外枠を残してキャンバスをクリア
-            //this._ctx.clearRect(8, 8, this._can.width - 16, this._can.height - 16);
+            // キャンバスをクリア
             this._drawFrame();
             var tk = "";
 
@@ -227,7 +226,7 @@
             this._box.rotation.set(position / 1234, position / 2345, position / 3456);
         }
         
-        // 外枠（ワイヤーフレーム）の描画
+        // キャンパスの描画
         _drawFrame ()
         {
             var can = this._can;
@@ -273,7 +272,8 @@
       //main処理: TextAliveのAR表示
       const renderer = new THREE.WebGLRenderer({
         antialias: true,
-        alpha: true
+        alpha: true,
+        imageSmoothingEnabled: = true
       });
       var clientWidth = document.documentElement.clientWidth;
       var clientHeight = document.documentElement.clientHeight;
